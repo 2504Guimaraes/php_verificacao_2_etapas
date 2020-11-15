@@ -13,4 +13,4 @@ linguagem que for.
 ## Observações Importantes
 
 Mesmo com a classe "ConfigEmail" não aparecendo, você pode
-definir as configurações necessárias de envio direto em testeEmail.php.
+definir as configurações necessárias de envio direto em "**src/main/token.php**".
