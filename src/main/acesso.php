@@ -21,13 +21,15 @@
     $senha = $_POST['senha'];
 
     if($codigo === $token && $conEmail === $email && $conSenha === $senha){
+        
         echo "<div class='toast toast-success'>
-        Acesso permitido, bem vindo $email
-      </div>";
+                Acesso permitido, bem vindo $email
+              </div>";
     }else{
+
         echo "<div class='toast toast-error'>
-        Acesso negado, um ou mais dados estão incorretos
-      </div>";
+                Acesso negado, um ou mais dados estão incorretos
+            </div>";
     }
 
 

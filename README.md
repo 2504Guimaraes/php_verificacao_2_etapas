@@ -1,6 +1,7 @@
 ---
 Tema Abordado: "Segurança da Informação"
 Linguagem: PHP
+Componentes do Grupo: Ivan Guimarães, Breno Lins e Nathalia Caroline
 ---
 
 ## PHP - Trabalho de verificacao em 2 etapas simples.

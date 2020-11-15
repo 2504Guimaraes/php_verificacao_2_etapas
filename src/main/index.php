@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.4.5/spectre.min.css">
+    <link rel="stylesheet" href="../style/spectre.min.css">
     <title>Dupla autenticação</title>
 </head>
 <body>
@@ -24,24 +24,32 @@
 
         <div class=" form-group formulario">
 
-
-
         <?php 
             echo
 
                 "<form action='token.php' method='POST'>
-                    <label class='form-label' for='email'>Email</label>
-                    <input class='form-input' type='email' name='email' id='email'>
-                    <label class='form-label' for='senha'>Senha:</label>
-                    <input class='form-input' type='password' name='senha' id='senha'>
-                                  
-                    <br> 
                     
-                    <p>Token de acesso: (copie esse código para validar o acesso)</p> 
-                    <input class='form-input' type='text' name='codigo' 
-                    readonly value='" . $codigo . "'>
-                            
-                    <br>
+                    <label class='form-label' for='email'>Email</label>
+                    <input 
+                        class='form-input' 
+                        type='email' 
+                        name='email' 
+                        id='email'>
+                    
+                        <label class='form-label' for='senha'>Senha:</label>
+                    <input 
+                        class='form-input' 
+                        type='password' 
+                        name='senha' 
+                        id='senha'>
+                    
+                    <p id='paragraf_token'>Token de acesso: (copie esse código para validar o acesso)</p> 
+                    
+                    <input 
+                        class='form-input' 
+                        type='text' 
+                        name='codigo' 
+                        readonly value='" . $codigo . "'>
                             
                     <button class='btn btn-primary' type='submit'>
                         Autenticar
