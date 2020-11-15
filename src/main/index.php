@@ -8,47 +8,40 @@
     <title>Dupla autenticação</title>
 </head>
 <body>
-
-    <?php
-        function generateID() {
-            return uniqid();
-        }
-
-        $codigo = generateID();
-    ?>
-
     <?php 
         echo
-            "<form action='token.php' method='POST'>
-                    
-                 <label class='form-label' for='email'>Email</label>
-                 <input 
-                     class='form-input' 
-                     type='email' 
-                     name='email' 
-                     id='email'>
-                    
-                     <label class='form-label' for='senha'>Senha:</label>
-                 <input 
-                     class='form-input' 
-                     type='password' 
-                     name='senha' 
-                     id='senha'>
-                    
-                 <p id='paragraf_token'>Token de acesso: (copie esse código para validar o acesso)</p> 
-                    
-                 <input 
-                     class='form-input' 
-                     type='text' 
-                     name='codigo' 
-                     readonly value='" . $codigo . "'>
-                            
-                 <button class='btn btn-primary' type='submit'>
-                     Autenticar
-                 </button>
+            "<form class='formulario' action='token.php' method='POST'>
 
-             </form>";
+                <h2 id='titulo_form'>Insira seus dados para validação:</h2>
+                
+                <p id='aviso_p_validacao'>
+                    Aviso para validação!
+                </p>
+                <p>
+                    Após preencher seu campo de email, seremos capazes de enviar o código
+                    de segurança a você, e por meio desse código você conseguirá acessar
+                    a página de sucesso.
+                </p>
+                    
+                <label class='form-label' for='email'>Insira seu email:</label>
+                <input 
+                    class='form-input' 
+                    type='email' 
+                    name='email' placeholder='ex: seuEmail.@outlook.com'
+                    id='email' required>
+                     
+                <label class='form-label' for='email'>Insira seu nome completo:</label>
+                <input 
+                    class='form-input' 
+                    type='text' 
+                    name='nome_pessoa' placeholder='digite o seu nome.'
+                    id='email' required>
+                
+                <button id='btn_enviar' name='btn_enviar' class='btn btn-primary' type='submit'>
+                    Autenticar
+                </button>
+
+            </form>";
         ?>
-    
 </body>
 </html>

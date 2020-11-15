@@ -5,7 +5,7 @@
 html, css {
     margin: 0;
     border: 0;
-    background-color: #2196F3;
+    background-color: #f3f2f9;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -14,16 +14,40 @@ html, css {
     flex-direction: column;
 }
 
-.container{ margin: 60px 0; background-color: yellow; }
-
-.container h1{ text-align: center; }
-
-.formulario{
-    max-width: 600px;
-    margin: 30px auto;
-    background-color: tomato;
+.formulario {
+    max-width: 400px;
+    padding: 35px;
+    background-color: #fff;
+    box-shadow: 0px 5px 15px 0px #deddeb;
 }
 
-#paragraf_token { margin: 10px 0 !important; }
+ #aviso_p_validacao {
+    background-color: #e9f0ff;
+    padding: 5px;
+    margin: 5px 0;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 19px;
+    font-size: 13px;
+}
 
-.btn{ margin: 10px 0; }
+#paragrafo_codigo { margin: 10px 0 !important; }
+
+.btn, #btn_enviar { margin-top: 20px; width: 100%; height: 2.1rem; }
+
+
+@media (max-width: 450px) 
+{
+    .formulario {
+        max-width: 330px;
+    }
+}
+
+@media (max-width: 300px) 
+{
+    .formulario {
+        min-width: 265px;
+        max-width: 270px;
+        padding: 20px;
+    }
+}
