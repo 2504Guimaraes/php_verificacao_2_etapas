@@ -13,7 +13,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.4.5/spectre.min.css">
+    <link rel="stylesheet" href="../style/spectre.min.css">
     <link rel="stylesheet" href="../style/style.css">
     <title>Document</title>
 </head>
@@ -21,7 +21,7 @@
         <div class="container">
         <h1>Confirmar</h1>
             <div class="formulario form-group">
-            
+
                 <form action="acesso.php" method="POST">
 
                     <label for="email" class="form-label">Confirme seu Email</label>
