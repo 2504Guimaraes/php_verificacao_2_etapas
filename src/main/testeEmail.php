@@ -4,11 +4,14 @@ require_once 'PHPMailer/PHPMailerAutoload.php';
 require_once 'ConfigEmail.class.php';
 
 $config = new ConfigEmail(
-    "Testando Email p/ Disciplina do Claudio",
-    "Seu email foi enviado corretamente! :D"
+    "Testando Email p/ Matéria do Claudio",
+    "Seu email foi enviado corretamente! :D" . 
+    "\nAgora as configurações de Email estão 100% operacionais."
 );
 
 $mail = new PHPMailer();
+$mail->CharSet = 'UTF-8';
+$mail->Encoding = 'base64';
 $mail->isSMTP();
 $mail->SMTPAuth = true;
 $mail->SMTPSecure = 'ssl';
