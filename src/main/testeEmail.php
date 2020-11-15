@@ -9,6 +9,9 @@ $config = new ConfigEmail(
     "\nAgora as configurações de Email estão 100% operacionais."
 );
 
+
+// oie 
+
 $mail = new PHPMailer();
 $mail->CharSet = 'UTF-8';
 $mail->Encoding = 'base64';
