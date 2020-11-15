@@ -9,3 +9,8 @@ Componentes do Grupo: Ivan Guimarães, Breno Lins e Nathalia Caroline
 Trabalho em grupo realizado para a faculdade, tem como o objetivo
 puro e simples de fazer uma verificação de duas etapas com qualquer
 linguagem que for.
+
+## Observações Importantes
+
+Mesmo com a classe "ConfigEmail" não aparecendo, você pode
+definir as configurações necessárias de envio direto em testeEmail.php.
