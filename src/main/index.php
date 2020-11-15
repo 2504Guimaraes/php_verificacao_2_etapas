@@ -10,56 +10,45 @@
 <body>
 
     <?php
-
         function generateID() {
             return uniqid();
         }
 
         $codigo = generateID();
-
     ?>
 
-    <div class="container">
-        <h1>Cadastrar</h1>
-
-        <div class=" form-group formulario">
-
-        <?php 
-            echo
-
-                "<form action='token.php' method='POST'>
+    <?php 
+        echo
+            "<form action='token.php' method='POST'>
                     
-                    <label class='form-label' for='email'>Email</label>
-                    <input 
-                        class='form-input' 
-                        type='email' 
-                        name='email' 
-                        id='email'>
+                 <label class='form-label' for='email'>Email</label>
+                 <input 
+                     class='form-input' 
+                     type='email' 
+                     name='email' 
+                     id='email'>
                     
-                        <label class='form-label' for='senha'>Senha:</label>
-                    <input 
-                        class='form-input' 
-                        type='password' 
-                        name='senha' 
-                        id='senha'>
+                     <label class='form-label' for='senha'>Senha:</label>
+                 <input 
+                     class='form-input' 
+                     type='password' 
+                     name='senha' 
+                     id='senha'>
                     
-                    <p id='paragraf_token'>Token de acesso: (copie esse código para validar o acesso)</p> 
+                 <p id='paragraf_token'>Token de acesso: (copie esse código para validar o acesso)</p> 
                     
-                    <input 
-                        class='form-input' 
-                        type='text' 
-                        name='codigo' 
-                        readonly value='" . $codigo . "'>
+                 <input 
+                     class='form-input' 
+                     type='text' 
+                     name='codigo' 
+                     readonly value='" . $codigo . "'>
                             
-                    <button class='btn btn-primary' type='submit'>
-                        Autenticar
-                    </button>
+                 <button class='btn btn-primary' type='submit'>
+                     Autenticar
+                 </button>
 
-                </form>";
+             </form>";
         ?>
-
-        </div>
-    </div>
     
 </body>
 </html>
