@@ -1,10 +1,10 @@
 <?php
 
 require_once 'PHPMailer/PHPMailerAutoload.php';
-require_once 'src/main/configEmail.php';
+require_once 'ConfigEmail.class.php';
 
 $config = new ConfigEmail(
-    "Testando Email p/ Matéria do Claudio",
+    "Testando Email p/ Disciplina do Claudio",
     "Seu email foi enviado corretamente! :D"
 );
 
