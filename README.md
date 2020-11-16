@@ -12,5 +12,5 @@ linguagem que for.
 
 ## Observações Importantes
 
-Mesmo com a classe "ConfigEmail" não aparecendo, você pode
-definir as configurações necessárias de envio direto em "**src/main/token.php**".
+O email na classe "**src/main/ConfigEmail.class.php**" não funciona, mas pode ser
+facilmente substituido por qualquer outro do gmail.
