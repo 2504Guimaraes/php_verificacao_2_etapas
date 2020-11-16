@@ -1,5 +1,9 @@
 <?php
 
+// iniciando armazenamento de sessão...
+
+session_start();
+
 require_once 'PHPMailer/PHPMailerAutoload.php';
 require_once 'ConfigEmail.class.php';
 
@@ -13,6 +17,17 @@ if (isset($_POST["btn_enviar"])) {
     }
 
     $codigo = generateID();
+
+    // Armazenando o código gerado em uma sessão...
+
+    $_SESSION['codigo_gerado_autimaticamente'] = $codigo;
+
+    // Amazenando demais informações menos importantes numa sessão...
+
+    $_SESSION['nome_pessoa'] = $nome_pessoa;
+    $_SESSION['email_pessoa'] = $email;
+
+    // Inicializando Objetos necessários para meu robozinho de email...
 
     $config = new ConfigEmail(
         "Robô de Emails - Seguranças em Sistemas p/ Internet",
@@ -52,14 +67,14 @@ if (isset($_POST["btn_enviar"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/spectre.min.css">
     <link rel="stylesheet" href="../style/style.css">
-    <title>Document</title>
+    <title>Confirmação de Código</title>
 </head>
 <body>
 
     <?php 
         if (isset($_POST["btn_enviar"])) {
 
-            echo "<form class='formulario' action='acesso.php' method='POST'>
+            echo "<form class='formulario' action='sucesso.php' method='POST'>
 
                 <h2 id='titulo_form'>Insira seu código de acesso:</h2>
 
@@ -75,10 +90,17 @@ if (isset($_POST["btn_enviar"])) {
                     name='codigo_pessoa' placeholder='ex: 479AdleYk12'
                     id='codigo_pessoa' required>
 
-                <button class='btn btn-primary'>Acessar página de sucesso</button>
+                <button type='submit' id='btn_enviar_token' name='btn_enviar_token' class='btn btn-primary'>
+                    Autenticar código ✔️
+                </button>
 
             </form>";
 
+        }
+
+        else {
+            $var = "<script>javascript:history.back(-1)</script>";
+            echo $var;
         }
     ?>
 
