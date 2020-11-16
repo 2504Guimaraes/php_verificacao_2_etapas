@@ -44,7 +44,7 @@
                 <h4 id='erroTitulo'>
                   Erro de Cadastro
                 </h4> 
-                <h5>Código$codigoDigitado não bate com o token enviado ao email $emailDigitado</h5>
+                <h5>Código <i style='color: black;'><strong>$codigoDigitado</strong></i> não bate com o token enviado ao email $emailDigitado</h5>
                 <p id='link_voltar'><a href='index.php'>Voltar ao formulário de envio</a></p>
               </div>
           </main>
