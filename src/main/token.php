@@ -30,7 +30,7 @@ if (isset($_POST["btn_enviar"])) {
     // Inicializando Objetos necessários para meu robozinho de email...
 
     $config = new ConfigEmail(
-        "Robô de Emails - Seguranças em Sistemas p/ Internet",
+        "Robô de Emails - Segurança em Sistemas p/ Internet",
         "Olá <strong>$nome_pessoa</strong>, 
         <br>
         Você recebeu a mensagem de validação, 
