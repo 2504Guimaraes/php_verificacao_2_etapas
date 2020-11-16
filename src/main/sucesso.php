@@ -32,6 +32,7 @@
           "<main id='sucesso_aviso'>
               <div>
                 Bem vindo $nomeDigitado! Sua autenticação foi feita com sucesso. 😃
+                <p id='link_voltar'><a href='index.php'>Voltar ao formulário de envio</a></p>
               </div>
           </main>";
       }
@@ -40,11 +41,20 @@
         echo 
           "<main id='fracasso_aviso'>
               <div>
-                ERRO - Código <strong>$codigoDigitado</strong> não bate com o token
-                enviado ao email <strong>$emailDigitado</strong>
+                <h4 id='erroTitulo'>
+                  Erro de Cadastro
+                </h4> 
+                <h5>Código$codigoDigitado não bate com o token enviado ao email $emailDigitado</h5>
+                <p id='link_voltar'><a href='index.php'>Voltar ao formulário de envio</a></p>
               </div>
-          </main>";
+          </main>
+          ";
       }
+    }
+
+    else {
+      $var = "<script>javascript:history.back(-2)</script>";
+      echo $var;
     }
 
   ?>

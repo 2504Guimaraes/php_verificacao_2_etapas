@@ -2,7 +2,7 @@
 
 * { box-sizing: border-box; }
 
-#sucesso_aviso, #fracasso_aviso {
+#sucesso_aviso, #fracasso_aviso{
     background-color: #fff;
     min-width: 250px;
     max-width: 360px;
@@ -11,7 +11,11 @@
     border-radius: 3px;
 }
 
-#sucesso_aviso div {
+#fracasso_aviso {
+    max-width: 500px;
+}
+
+#sucesso_aviso div, #fracasso_aviso div {
     color: #434343;
     font-size: 1rem;
     display: flex;
@@ -21,6 +25,27 @@
     padding: 20px;
 }
 
-#fracasso_aviso {
-    background: linear-gradient(45deg, #e85600,#E91E63);
+#erroTitulo {
+    padding: 10px 15px;
+    background-color: #E91E63;
+    color: white;
+    width: fit-content;
+}
+
+#link_voltar {
+    margin: 10px 0 0 0;
+}
+
+#link_voltar > a {
+    font-family: monospace;
+    color: #000;
+}
+
+@media (max-width: 300px) 
+{
+    #erroTitulo { font-size: 18px; }
+    h5 { font-size: 16px; }
+    #link_voltar > a {
+        font-size: 14px;
+    }
 }
