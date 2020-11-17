@@ -1,6 +1,6 @@
 ---
 Tema Abordado: "Segurança da Informação"
-Linguagem: PHP
+Linguagem Principal: PHP
 Componentes do Grupo: Ivan Guimarães, Breno Lins e Nathalia Caroline
 ---
 
