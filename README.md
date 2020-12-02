@@ -12,5 +12,4 @@ linguagem que for.
 
 ## Observações Importantes
 
-O email na classe "**src/main/ConfigEmail.class.php**" não funciona, mas pode ser
-facilmente substituido por qualquer outro do gmail.
+O arquivo contendo o email usado pelo programa "**src/main/ConfigEmail.class.php**" não está mais disponível, mas existe um arquivo idêntico a ele chamado **ConfigEmail_Modelo.class.php** que faz a mesma coisa (o email presente não funciona). Crie um gmail para isso, ponha os dados dele para o robô de emails poder fazer uso do mesmo. 
